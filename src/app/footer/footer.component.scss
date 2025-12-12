@@ -1,0 +1,27 @@
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  .footer-icon {
+    font-size: 1.7rem;
+    margin: 0 13px;
+    color: #bfbfbf;
+    transition: 0.3s ease;
+  }
+
+  .footer-icon:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
+  }
+}
+:root.light .footer {
+  background: #f8f9fa;
+  color: #111;
+}
+
+:root.light .footer-icon {
+  color: #555;
+}
+
+:root.light .footer-icon:hover {
+  color: #0d6efd;
+}

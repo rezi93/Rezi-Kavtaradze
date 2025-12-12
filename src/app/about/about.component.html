@@ -1,0 +1,64 @@
+<section class="about-section py-5">
+  <div class="container">
+
+    <div class="intro text-center mb-5">
+      <h1 class="title mb-3">{{ 'ABOUT.TITLE' | translate }}</h1>
+      <p class="lead description mb-4">{{ 'ABOUT.DESCRIPTION' | translate }}</p>
+      <div class="decor-divider"></div>
+    </div>
+
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3 mb-4"
+           *ngFor="let skill of skills; let i = index"
+           [attr.data-aos]="'fade-up'"
+           [attr.data-aos-delay]="i * 80">
+
+        <div class="skill-card h-100 shadow-sm border-0"
+             tabindex="0"
+             role="group"
+             [attr.aria-label]="skill.name">
+
+          <div class="card-body">
+            <div class="icon-wrap">
+              <span *ngIf="skill.type === 'letter'" class="skill-letter">A</span>
+
+              <i *ngIf="skill.type === 'bootstrap'" [class]="'bi bi-' + skill.icon + ' skill-icon'"></i>
+            </div>
+
+            <h6 class="card-title mt-3">{{ skill.name }}</h6>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+
+<div class="row text-center mt-5 g-4">
+  <div class="col-4">
+    <h2 class="mb-1">{{ 'ABOUT.STATS.PROJECTS_TITLE' | translate }}</h2>
+    <p class="mb-0">{{ 'ABOUT.STATS.PROJECTS' | translate }}</p>
+  </div>
+  <div class="col-4">
+    <h2 class="mb-1">{{ 'ABOUT.STATS.LEARNING_TITLE' | translate }}</h2>
+    <p class="mb-0">{{ 'ABOUT.STATS.LEARNING' | translate }}</p>
+  </div>
+  <div class="col-4">
+    <h2 class="mb-1">{{ 'ABOUT.STATS.ONGOING_TITLE' | translate }}</h2>
+    <p class="mb-0">{{ 'ABOUT.STATS.ONGOING' | translate }}</p>
+  </div>
+</div>
+
+<p class="text-center fst-italic mt-4 mb-0">
+  {{ 'ABOUT.QUOTE' | translate }}
+</p>
+
+<div class="decor-divider mt-5 mx-auto"></div>
+
+
+
+  
+
+  </div>
+</section>

@@ -1,0 +1,41 @@
+<section class="py-5 bg-light text-dark">
+  <div class="container">
+    <h2 class="text-center mb-4">{{ 'CONTACT.TITLE' | translate }}</h2>
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-6">
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex align-items-center" *ngFor="let info of contactInfo">
+  <i class="bi me-3" [class]="info.icon"></i>
+  
+  <span *ngIf="info.type === 'phone' || info.type === 'email'" 
+        (click)="copyToClipboard(info.value)" 
+        style="cursor:pointer">
+    {{ info.value }}
+  </span>
+
+  <a *ngIf="info.type === 'linkedin' || info.type === 'github'" 
+     [href]="info.link" target="_blank">
+    {{ info.value }}
+  </a>
+</li>
+        </ul>
+      </div>
+    </div>
+
+   <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="row g-3">
+      <div class="col-md-6">
+        <input type="text" name="name" ngModel placeholder="{{ 'CONTACT.NAME' | translate }}" class="form-control" required />
+      </div>
+      <div class="col-md-6">
+        <input type="email" name="email" ngModel placeholder="{{ 'CONTACT.EMAIL' | translate }}" class="form-control" required />
+      </div>
+      <div class="col-12">
+        <textarea name="message" ngModel placeholder="{{ 'CONTACT.MESSAGE' | translate }}" class="form-control" rows="5" required></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary">{{ 'CONTACT.SEND_BTN' | translate }}</button>
+      </div>
+    </form>
+  </div>
+</section>

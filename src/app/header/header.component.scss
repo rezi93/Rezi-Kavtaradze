@@ -1,0 +1,19 @@
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+.navbar {
+  background: #0d1117 !important;
+}
+.nav-link {
+  color: #adb5bd !important;
+  transition: 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #fff !important;
+  background-color: #343a40;
+  border-radius: 5px;
+}

@@ -1,0 +1,20 @@
+<section class="py-5 bg-light">
+  <div class="container">
+    <h1 class="text-center mb-5">{{ 'PROJECTS.TITLE' | translate }}</h1>
+
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let project of projects">
+        <div class="card h-100 shadow-sm">
+          <img [src]="project.image" class="card-img-top" alt="{{ project.title | translate }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title | translate }}</h5>
+            <p class="card-text">{{ project.description | translate }}</p>
+            <a [href]="project.link" target="_blank" class="btn btn-primary">
+              {{ 'PROJECTS.VIEW_BTN' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

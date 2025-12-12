@@ -1,0 +1,35 @@
+.project-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 12px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover iframe {
+    transform: scale(1.05);
+  }
+}
+
+h2 {
+  color: #0d6efd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

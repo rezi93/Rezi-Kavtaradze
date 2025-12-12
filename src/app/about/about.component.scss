@@ -1,0 +1,134 @@
+
+$primary: #2563eb;
+$accent: #7c3aed;
+$bg-start: #0f172a;
+$bg-end: #0b1221;
+$glass-bg: rgba(255,255,255,0.06);
+$glass-border: rgba(255,255,255,0.08);
+
+.about-section {
+  background: linear-gradient(135deg, $bg-start 0%, $bg-end 60%);
+  color: #e6eef8;
+  padding: 4rem 0;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .intro {
+    .title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .description {
+      max-width: 760px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    .decor-divider {
+      width: 120px;
+      height: 4px;
+      margin: 1.25rem auto 0;
+      background: linear-gradient(90deg, $primary, $accent);
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(124,58,237,0.12);
+    }
+  }
+
+  .skill-card {
+    background: $glass-bg;
+    border: 1px solid $glass-border;
+    border-radius: 16px;
+    padding: 1.25rem;
+    transition: transform 280ms cubic-bezier(.2,.9,.3,1), box-shadow 280ms;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    cursor: default;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-8px) rotateX(2deg) rotateY(1deg);
+      box-shadow: 0 18px 40px rgba(2,6,23,0.6);
+      outline: none;
+    }
+
+    .icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      box-shadow: inset 0 -6px 14px rgba(255,255,255,0.02);
+    }
+
+    .skill-icon {
+      font-size: 2.25rem;
+      transition: transform 240ms, color 240ms;
+      color:#eaf2ff;
+    }
+
+    .skill-letter {
+      font-size: 2.25rem;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      color: #eaf2ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #eaf2ff;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .skill-card { padding: 1rem; }
+    .skill-icon, .skill-letter { font-size: 1.75rem; width: 2rem; height: 2rem; }
+  }
+}
+
+// Subtle background shapes
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(600px 300px at 10% 10%, rgba(124,58,237,0.08), transparent 10%),
+              radial-gradient(500px 250px at 90% 90%, rgba(37,99,235,0.06), transparent 10%);
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+
+.row.text-center h2 {
+  font-size: 2rem;
+  color: #eaf2ff;
+  font-weight: 700;
+}
+
+.row.text-center p {
+  font-size: 0.9rem;
+  color: rgba(234,242,255,0.8);
+}
+
+.fst-italic {
+  color: rgba(234,242,255,0.75);
+  font-size: 1rem;
+}
+
