@@ -1,0 +1,31 @@
+{
+  "HOME": "Home",
+  "ABOUT": "About",
+  "PROJECTS": "Projects",
+  "CONTACT": "Contact",
+
+  "HOME_PAGE": {
+    "TITLE": "Hello, I'm Rezi 👋",
+    "DESCRIPTION": "Junior Web Developer crafting modern and responsive websites.",
+    "PROJECTS_BTN": "My Projects",
+    "CONTACT_BTN": "Contact Me"
+  },
+
+  "ABOUT_PAGE": {
+    "TITLE": "About Me",
+    "DESCRIPTION": "I am a Junior Web Developer passionate about creating modern, responsive websites using the latest technologies.",
+    "MORE_BTN": "Learn More",
+    "CONTACT_BTN": "Contact Me",
+    "BACK_HOME": "Back to Home"
+  },
+
+  "PROJECTS_PAGE": {
+    "TITLE": "My Projects",
+    "VIEW_BTN": "View Details"
+  },
+
+  "CONTACT_PAGE": {
+    "TITLE": "Get in Touch",
+    "DESCRIPTION": "Feel free to reach out for collaborations or opportunities."
+  }
+}
